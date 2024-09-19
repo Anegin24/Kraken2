@@ -36,7 +36,7 @@ Classify any sequences with kraken2
             datasets download genome accession --inputfile list.txt > outdir/all_accessions.zip
             ```
    
-      Method 2: With custom sequence or which doesn't have ref sequence, collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
+      Method 2: With custom sequences or which doesn't have ref sequence, collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
       
       Unzip file
       ```bash
