@@ -20,15 +20,22 @@ Classify any sequences with kraken2
             ```bash
             conda create -n ncbi_datasets
             ```
+   
       Then, activate your new environment:
             ```bash
             conda activate ncbi_datasets
             ```
+   
       Finally, install the datasets conda package:
             ```bash
             conda install -c conda-forge ncbi-datasets-cli      
             ```
-      
+   
+      Download by accessing number:
+            ```bash
+            datasets download genome accession --inputfile list.txt > outdir/all_accessions.zip
+            ```
+   
       Method 2: With custom sequence or which doesn't have ref sequence, collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
       
       Unzip file
