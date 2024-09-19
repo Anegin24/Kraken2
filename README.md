@@ -23,12 +23,15 @@ find refseq -name "*.fna" -exec kraken2-build --add-to-library {} --db custom_db
 This command generate a "library" in custom_db.
 
 3. Build kraken custom database
+4. 
 custom_db must contain "library" and "taxonomy" from step 1 & 2.
+
 Build custom database:
 ```bash
 kraken2-build --db custom_db --build --threads 24
 ```
 4. Classify sequence:
+5. 
 Sequences stored in fasta file.
 ```bash
 kraken2 --use-names --db custom_db/ --threads 16 --confidence 0.1 --report repseqs.report rep-seqs.fasta --threads 20 > repseqs.kraken
