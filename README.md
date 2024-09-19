@@ -9,7 +9,7 @@ kraken2-build --download-taxonomy --db $DBNAME
 This command generate a "taxonomy" folder.
 
 2. Contruct the library
-Collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
+###Collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
 unzip file
 ```bash
 Find refseq -name "*.gz" -print0 | parallel -0 gunzip
