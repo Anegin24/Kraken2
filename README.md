@@ -22,7 +22,7 @@ Classify any sequences with kraken2
       ```
       This command generate a "library" in custom_db.
 
-3. Build kraken custom database
+3. Build kraken custom database:
      
       custom_db must contain "library" and "taxonomy" from step 1 & 2.
       
