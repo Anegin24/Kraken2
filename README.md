@@ -11,8 +11,11 @@ Classify any sequences with kraken2
 2. Contruct the library
    
       Method 1: Using ncbi dataset https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/download-genome/
+
       Install using conda:
+   
       The NCBI Datasets CLI tools are available as a conda package that includes both datasets and dataformat.
+   
       First, create a conda environment:
             ```bash
             conda create -n ncbi_datasets
