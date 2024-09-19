@@ -7,6 +7,7 @@ Classify any sequences with kraken2
 kraken2-build --download-taxonomy --db $DBNAME
 ```
 This command generate a "taxonomy" folder.
+
 2. Contruct the library
 Collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
 unzip file
@@ -18,6 +19,7 @@ Add reference sequence to custom database
 find refseq -name "*.fna" -exec kraken2-build --add-to-library {} --db custom_db \;
 ```
 This command generate a "library" in custom_db.
+
 3. Build kraken custom database
 custom_db must contain "library" and "taxonomy" from step 1 & 2.
 Build custom database:
