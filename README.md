@@ -9,8 +9,29 @@ Classify any sequences with kraken2
       This command generate a "taxonomy" folder.
 
 2. Contruct the library
+   
+      Method 1: Using ncbi dataset https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/download-genome/
 
-      Collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
+            Install using conda:
+   
+            The NCBI Datasets CLI tools are available as a conda package that includes both datasets and dataformat.
+
+            First, create a conda environment:
+            ```bash
+            conda create -n ncbi_datasets
+            ```
+
+            Then, activate your new environment:
+            ```bash
+            conda activate ncbi_datasets
+            ```
+
+            Finally, install the datasets conda package:
+            ```bash
+            conda install -c conda-forge ncbi-datasets-cli      
+            ```
+      
+      Method 2: With custom sequence or which doesn't have ref sequence, collect fasta file from ncbi or other source put them on "refseq" folder. Then run add library command:
       
       Unzip file
       ```bash
@@ -22,7 +43,7 @@ Classify any sequences with kraken2
       ```
       This command generate a "library" in custom_db.
 
-3. Build kraken custom database:
+4. Build kraken custom database:
      
       custom_db must contain "library" and "taxonomy" from step 1 & 2.
       
@@ -30,7 +51,7 @@ Classify any sequences with kraken2
       ```bash
       kraken2-build --db custom_db --build --threads 24
       ```
-4. Classify sequence:
+5. Classify sequence:
    
       Sequences stored in fasta file.
       ```bash
